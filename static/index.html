@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RR Lyrae (manim-RRL) Astrophysics Simulator</title>
+    <!-- Modern Typography: Outfit & Roboto Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <!-- Starfield overlay -->
+    <div class="stars"></div>
+    <div class="twinkling"></div>
+
+    <div class="app-container">
+        <!-- Header -->
+        <header>
+            <div class="header-logo">
+                <span class="pulse-star">✦</span>
+                <h1>manim-RRL</h1>
+            </div>
+            <p class="subtitle">Interactive RR Lyrae Variable Star & Distance Scale Simulator</p>
+        </header>
+
+        <!-- Main Dashboard -->
+        <main class="dashboard-grid">
+            <!-- Left Panel: Controls & Calculations -->
+            <section class="panel glass controls-panel">
+                <h2 class="panel-title">Astrophysical Parameters</h2>
+                
+                <!-- Period -->
+                <div class="control-group">
+                    <div class="control-label">
+                        <span>Pulsation Period (P)</span>
+                        <span class="value-display" id="val-period">0.60 d</span>
+                    </div>
+                    <input type="range" id="input-period" min="0.20" max="1.20" step="0.01" value="0.60">
+                    <span class="control-help">Typical: 0.2–0.4d (RRc), 0.4–1.0d (RRab)</span>
+                </div>
+
+                <!-- Metallicity -->
+                <div class="control-group">
+                    <div class="control-label">
+                        <span>Metallicity ([Fe/H])</span>
+                        <span class="value-display" id="val-feh">-1.50 dex</span>
+                    </div>
+                    <input type="range" id="input-feh" min="-2.50" max="0.00" step="0.05" value="-1.50">
+                    <span class="control-help">Abundance of iron compared to the Sun (dex)</span>
+                </div>
+
+                <!-- Amplitude -->
+                <div class="control-group">
+                    <div class="control-label">
+                        <span>V-band Amplitude (A<sub>V</sub>)</span>
+                        <span class="value-display" id="val-amplitude">0.80 mag</span>
+                    </div>
+                    <input type="range" id="input-amplitude" min="0.20" max="1.50" step="0.05" value="0.80">
+                    <span class="control-help">Brightness variation range in visual band</span>
+                </div>
+
+                <!-- Distance -->
+                <div class="control-group">
+                    <div class="control-label">
+                        <span>Distance (d)</span>
+                        <span class="value-display" id="val-distance">1000 pc</span>
+                    </div>
+                    <input type="range" id="input-distance" min="100" max="5000" step="50" value="1000">
+                    <span class="control-help">Distance in parsecs (1 pc ≈ 3.26 light years)</span>
+                </div>
+
+                <!-- Pulsation Mode Selection -->
+                <div class="control-group">
+                    <span class="control-label-text">Pulsation Mode</span>
+                    <div class="radio-group">
+                        <label class="radio-container">
+                            <input type="radio" name="input-mode" value="RRab" checked>
+                            <span class="radio-checkmark"></span>
+                            RRab (Fundamental)
+                        </label>
+                        <label class="radio-container">
+                            <input type="radio" name="input-mode" value="RRc" id="radio-rrc">
+                            <span class="radio-checkmark"></span>
+                            RRc (First Overtone)
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Action Button -->
+                <button id="btn-render" class="btn-primary">
+                    <span class="btn-text">Generate Manim Animation</span>
+                    <div class="spinner hidden"></div>
+                </button>
+                
+                <!-- Live Stats -->
+                <div class="stats-container">
+                    <h3 class="subpanel-title">Derived Physical Properties</h3>
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <span class="stat-label">Abs Magnitude (M<sub>V</sub>)</span>
+                            <span class="stat-value" id="stat-mv">+0.48</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-label">App Magnitude (m<sub>V</sub>)</span>
+                            <span class="stat-value" id="stat-app-mv">10.48</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-label">Distance Modulus (μ)</span>
+                            <span class="stat-value" id="stat-modulus">10.00</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-label">Luminosity (L / L<sub>☉</sub>)</span>
+                            <span class="stat-value" id="stat-luminosity">55.2</span>
+                        </div>
+                    </div>
+                    <div class="instability-warning" id="strip-status">
+                        ✓ Inside Instability Strip
+                    </div>
+                </div>
+            </section>
+
+            <!-- Right Panel: Animation & SVG Plots -->
+            <section class="display-container">
+                <!-- Video Display Frame -->
+                <div class="panel glass video-panel">
+                    <h2 class="panel-title flex-between">
+                        <span>Pulsation Animation</span>
+                        <span class="badge" id="badge-cache">Pre-rendered</span>
+                    </h2>
+                    
+                    <div class="video-wrapper">
+                        <!-- Custom loading state -->
+                        <div class="loading-overlay hidden" id="loading-overlay">
+                            <div class="galaxy-spinner">
+                                <div class="orbit-1"></div>
+                                <div class="orbit-2"></div>
+                                <div class="orbit-3"></div>
+                                <div class="star-core"></div>
+                            </div>
+                            <p class="loading-text">Rendering Animation with Manim...</p>
+                            <p class="loading-subtext">Compiling vector graphics & encoding frames</p>
+                        </div>
+                        
+                        <!-- Video Player -->
+                        <video id="star-video" loop muted playsinline>
+                            <source src="" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    
+                    <!-- Video Controls Overlay -->
+                    <div class="video-controls">
+                        <button id="btn-play-pause" class="btn-control">⏸ Pause</button>
+                        <span class="video-time" id="video-progress">Phase: 0.000</span>
+                    </div>
+                </div>
+
+                <!-- Secondary Panel: Instability Strip & Color Magnitude Plot -->
+                <div class="panel glass plot-panel">
+                    <h2 class="panel-title">Instability Strip (H-R Diagram)</h2>
+                    <div class="plot-container">
+                        <!-- SVG H-R Diagram -->
+                        <svg id="hr-diagram" viewBox="0 0 500 280">
+                            <!-- Background Grid -->
+                            <rect class="plot-bg" width="500" height="280" />
+                            
+                            <!-- Axes -->
+                            <line class="axis" x1="50" y1="240" x2="470" y2="240" />
+                            <line class="axis" x1="50" y1="20" x2="50" y2="240" />
+                            
+                            <!-- Axis Labels -->
+                            <text class="axis-label" x="260" y="270" text-anchor="middle">Effective Temperature T_eff (K) [Inverted]</text>
+                            <text class="axis-label" x="18" y="130" text-anchor="middle" transform="rotate(-90, 18, 130)">Abs Magnitude M_V</text>
+                            
+                            <!-- X-Axis ticks & labels (Temperature inverted: hot to left) -->
+                            <text class="tick-label" x="80" y="255" text-anchor="middle">8000</text>
+                            <text class="tick-label" x="180" y="255" text-anchor="middle">7200</text>
+                            <text class="tick-label" x="280" y="255" text-anchor="middle">6400</text>
+                            <text class="tick-label" x="380" y="255" text-anchor="middle">5600</text>
+                            
+                            <!-- Y-Axis ticks & labels (Magnitude inverted: bright up) -->
+                            <text class="tick-label" x="40" y="50" text-anchor="end">-0.5</text>
+                            <text class="tick-label" x="40" y="110" text-anchor="end">0.0</text>
+                            <text class="tick-label" x="40" y="170" text-anchor="end">+0.5</text>
+                            <text class="tick-label" x="40" y="230" text-anchor="end">+1.0</text>
+                            
+                            <!-- Instability Strip Region -->
+                            <!-- Coordinates correspond to standard Instability strip bounds at Horizontal Branch -->
+                            <!-- Left Boundary (Blue Edge): T ~ 7400K -> X ~ 155 -->
+                            <!-- Right Boundary (Red Edge): T ~ 6100K -> X ~ 320 -->
+                            <polygon class="instability-strip" points="140,30 170,230 330,230 290,30" />
+                            <text class="strip-text" x="230" y="110" text-anchor="middle">Instability Strip</text>
+                            
+                            <!-- Horizontal Branch line -->
+                            <line class="hb-line" x1="60" y1="165" x2="460" y2="165" />
+                            <text class="hb-text" x="455" y="155" text-anchor="end">Horizontal Branch (HB)</text>
+                            
+                            <!-- Pulsating Star Trace -->
+                            <!-- Animated path indicating temperature and brightness loops -->
+                            <ellipse id="star-loop-path" cx="230" cy="165" rx="35" ry="18" class="star-path-line" />
+                            <circle id="star-indicator" cx="230" cy="165" r="7" class="pulsating-star-dot" />
+                        </svg>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Educational Section -->
+        <section class="panel glass education-panel">
+            <h2 class="education-title">Astrophysics of RR Lyrae Variable Stars</h2>
+            <div class="education-grid">
+                <div class="edu-card">
+                    <h3>The Kappa (κ) Mechanism</h3>
+                    <p>
+                        RR Lyrae stars are pulsating variables driven by the <strong>Kappa Mechanism</strong> (valve mechanism) in their helium ionization zones. 
+                        As gravity compresses the stellar envelope, helium is doubly ionized, becoming more opaque (increasing <em>&kappa;</em>). 
+                        This blocks outgoing radiative energy, building up heat and pressure. The high pressure forces the envelope to expand. 
+                        During expansion, helium recombines, opacity decreases, the radiation escapes, and pressure drops, causing gravity to pull the envelope back in.
+                    </p>
+                </div>
+                <div class="edu-card">
+                    <h3>Pulsation Modes: RRab vs. RRc</h3>
+                    <p>
+                        RR Lyrae variables are categorized by their pulsation modes:
+                        <br><strong>• RRab stars</strong> pulsate in the fundamental mode. They feature longer periods (0.4 to 1.0 days), larger amplitudes (up to 1.5 mag), and characteristically asymmetric light curves (a very rapid rise to maximum brightness followed by a gradual decay).
+                        <br><strong>• RRc stars</strong> pulsate in the first overtone. They have shorter periods (0.2 to 0.45 days), lower amplitudes, and nearly symmetric, sinusoidal light curves.
+                    </p>
+                </div>
+                <div class="edu-card">
+                    <h3>Standard Candles & Distance Ladder</h3>
+                    <p>
+                        RR Lyrae are key <strong>Standard Candles</strong> because they occupy a narrow region of the Horizontal Branch (the Instability Strip), resulting in a nearly constant average absolute magnitude of $M_V \approx +0.6$. 
+                        By accounting for metallicity $[Fe/H]$ via the <em>Period-Luminosity-Metallicity (PLZ) relation</em>, we calculate a high-precision absolute magnitude $M_V$. 
+                        Comparing $M_V$ to the measured apparent magnitude $m_V$ yields the <strong>Distance Modulus</strong>: 
+                        <span class="formula">μ = m_V - M_V = 5 log<sub>10</sub>(d) - 5</span>, allowing direct distance determination to globular clusters and galaxies.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p>Created with Manim (Community Edition) & FastAPI • Expert Astrophysics Tools</p>
+        </footer>
+    </div>
+</body>
+</html>
