@@ -17,7 +17,7 @@
 
     <div class="app-container">
         <!-- Header -->
-        <header>
+        <header class="hidden">
             <div class="header-logo">
                 <span class="pulse-star">✦</span>
                 <h1>manim-RRL</h1>
@@ -28,7 +28,7 @@
         <!-- Main Dashboard -->
         <main class="dashboard-grid">
             <!-- Left Panel: Controls & Calculations -->
-            <section class="panel glass controls-panel">
+            <section class="panel glass controls-panel hidden">
                 <h2 class="panel-title">Astrophysical Parameters</h2>
                 
                 <!-- Period -->
@@ -150,7 +150,7 @@
                 </div>
 
                 <!-- Secondary Panel: Instability Strip & Color Magnitude Plot -->
-                <div class="panel glass plot-panel">
+                <div class="panel glass plot-panel hidden">
                     <h2 class="panel-title">Instability Strip (H-R Diagram)</h2>
                     <div class="plot-container">
                         <!-- SVG H-R Diagram -->
@@ -200,7 +200,7 @@
         </main>
 
         <!-- Educational Section -->
-        <section class="panel glass education-panel">
+        <section class="panel glass education-panel hidden">
             <h2 class="education-title">Astrophysics of RR Lyrae Variable Stars</h2>
             <div class="education-grid">
                 <div class="edu-card">
@@ -233,7 +233,7 @@
         </section>
 
         <!-- Footer -->
-        <footer>
+        <footer class="hidden">
             <p>Created with Manim (Community Edition) & FastAPI • Expert Astrophysics Tools</p>
         </footer>
     </div>

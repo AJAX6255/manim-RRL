@@ -119,8 +119,11 @@ header .subtitle {
 /* Dashboard Grid Layout */
 .dashboard-grid {
     display: grid;
-    grid-template-columns: 420px 1fr;
+    grid-template-columns: 1fr;
     gap: 2rem;
+    max-width: 960px;
+    margin: 0 auto;
+    width: 100%;
 }
 
 @media (max-width: 950px) {
