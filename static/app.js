@@ -315,13 +315,15 @@ document.addEventListener("DOMContentLoaded", () => {
             const data = await response.json();
             
             // Update cache badge
-            if (data.cached) {
-                badgeCache.textContent = "Pre-rendered (Cached)";
-                badgeCache.style.borderColor = "var(--accent-secondary)";
-            } else {
-                badgeCache.textContent = "Newly Rendered";
-                badgeCache.style.borderColor = "var(--color-success)";
-                badgeCache.style.color = "var(--color-success)";
+            if (badgeCache) {
+                if (data.cached) {
+                    badgeCache.textContent = "Pre-rendered (Cached)";
+                    badgeCache.style.borderColor = "var(--accent-secondary)";
+                } else {
+                    badgeCache.textContent = "Newly Rendered";
+                    badgeCache.style.borderColor = "var(--color-success)";
+                    badgeCache.style.color = "var(--color-success)";
+                }
             }
 
             // Load and play new video

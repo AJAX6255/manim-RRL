@@ -123,38 +123,30 @@
 
             <!-- Right Panel: Animation & SVG Plots -->
             <section class="display-container">
-                <!-- Video Display Frame -->
-                <div class="panel glass video-panel">
-                    <h2 class="panel-title flex-between">
-                        <span>Pulsation Animation</span>
-                        <span class="badge" id="badge-cache">Pre-rendered</span>
-                    </h2>
-                    
-                    <div class="video-wrapper">
-                        <!-- Custom loading state -->
-                        <div class="loading-overlay hidden" id="loading-overlay">
-                            <div class="galaxy-spinner">
-                                <div class="orbit-1"></div>
-                                <div class="orbit-2"></div>
-                                <div class="orbit-3"></div>
-                                <div class="star-core"></div>
-                            </div>
-                            <p class="loading-text">Rendering Animation with Manim...</p>
-                            <p class="loading-subtext">Compiling vector graphics & encoding frames</p>
+                <div class="video-wrapper">
+                    <!-- Custom loading state -->
+                    <div class="loading-overlay hidden" id="loading-overlay">
+                        <div class="galaxy-spinner">
+                            <div class="orbit-1"></div>
+                            <div class="orbit-2"></div>
+                            <div class="orbit-3"></div>
+                            <div class="star-core"></div>
                         </div>
-                        
-                        <!-- Video Player -->
-                        <video id="star-video" loop muted playsinline>
-                            <source src="" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
+                        <p class="loading-text">Rendering Animation with Manim...</p>
+                        <p class="loading-subtext">Compiling vector graphics & encoding frames</p>
                     </div>
                     
-                    <!-- Video Controls Overlay -->
-                    <div class="video-controls">
-                        <button id="btn-play-pause" class="btn-control">⏸ Pause</button>
-                        <span class="video-time" id="video-progress">Phase: 0.000</span>
-                    </div>
+                    <!-- Video Player -->
+                    <video id="star-video" loop muted playsinline>
+                        <source src="" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                
+                <!-- Video Controls Overlay -->
+                <div class="video-controls">
+                    <button id="btn-play-pause" class="btn-control">⏸ Pause</button>
+                    <span class="video-time" id="video-progress">Phase: 0.000</span>
                 </div>
 
                 <!-- Secondary Panel: Instability Strip & Color Magnitude Plot -->
