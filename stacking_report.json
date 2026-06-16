@@ -1,0 +1,2143 @@
+[
+  {
+    "zlevel": "[0]",
+    "selector": "body",
+    "tag": "body",
+    "role": "",
+    "zIndex": "auto",
+    "position": "relative",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0
+    ],
+    "domIndex": 0
+  },
+  {
+    "zlevel": "[0]",
+    "selector": "html > body > div:nth-of-type(3)",
+    "tag": "div",
+    "role": "",
+    "zIndex": "auto",
+    "position": "static",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0
+    ],
+    "domIndex": 3
+  },
+  {
+    "zlevel": "[0]",
+    "selector": "html > body > div:nth-of-type(3) > header",
+    "tag": "header",
+    "role": "",
+    "zIndex": "auto",
+    "position": "relative",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0
+    ],
+    "domIndex": 4
+  },
+  {
+    "zlevel": "[0]",
+    "selector": "html > body > div:nth-of-type(3) > header > div",
+    "tag": "div",
+    "role": "",
+    "zIndex": "auto",
+    "position": "static",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0
+    ],
+    "domIndex": 5
+  },
+  {
+    "zlevel": "[0]",
+    "selector": "html > body > div:nth-of-type(3) > header > div > h1",
+    "tag": "h1",
+    "role": "",
+    "zIndex": "auto",
+    "position": "static",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0
+    ],
+    "domIndex": 7
+  },
+  {
+    "zlevel": "[0]",
+    "selector": "html > body > div:nth-of-type(3) > header > p",
+    "tag": "p",
+    "role": "",
+    "zIndex": "auto",
+    "position": "static",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0
+    ],
+    "domIndex": 8
+  },
+  {
+    "zlevel": "[0]",
+    "selector": "html > body > div:nth-of-type(3) > main",
+    "tag": "main",
+    "role": "",
+    "zIndex": "auto",
+    "position": "static",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0
+    ],
+    "domIndex": 9
+  },
+  {
+    "zlevel": "[0]",
+    "selector": "html > body > div:nth-of-type(3) > main > section:nth-of-type(2)",
+    "tag": "section",
+    "role": "",
+    "zIndex": "auto",
+    "position": "static",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0
+    ],
+    "domIndex": 67
+  },
+  {
+    "zlevel": "[0]",
+    "selector": "html > body > div:nth-of-type(3) > footer",
+    "tag": "footer",
+    "role": "",
+    "zIndex": "auto",
+    "position": "static",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0
+    ],
+    "domIndex": 124
+  },
+  {
+    "zlevel": "[0]",
+    "selector": "html > body > div:nth-of-type(3) > footer > p",
+    "tag": "p",
+    "role": "",
+    "zIndex": "auto",
+    "position": "static",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0
+    ],
+    "domIndex": 125
+  },
+  {
+    "zlevel": "[0 -> -2]",
+    "selector": "html > body > div",
+    "tag": "div",
+    "role": "",
+    "zIndex": "-2",
+    "position": "absolute",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0,
+      -2
+    ],
+    "domIndex": 1
+  },
+  {
+    "zlevel": "[0 -> -1]",
+    "selector": "html > body > div:nth-of-type(2)",
+    "tag": "div",
+    "role": "",
+    "zIndex": "-1",
+    "position": "absolute",
+    "opacity": "0.4",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0,
+      -1
+    ],
+    "domIndex": 2
+  },
+  {
+    "zlevel": "[0 -> 0]",
+    "selector": "html > body > div:nth-of-type(3) > header > div > span",
+    "tag": "span",
+    "role": "",
+    "zIndex": "auto",
+    "position": "static",
+    "opacity": "0.921077",
+    "transform": "matrix(1.18423, 0, 0, 1.18423, 0, 0)",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0,
+      0
+    ],
+    "domIndex": 6
+  },
+  {
+    "zlevel": "[0 -> 0]",
+    "selector": "html > body > div:nth-of-type(3) > main > section",
+    "tag": "section",
+    "role": "",
+    "zIndex": "auto",
+    "position": "static",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "blur(12px)",
+    "stackingPath": [
+      0,
+      0
+    ],
+    "domIndex": 10
+  },
+  {
+    "zlevel": "[0 -> 0]",
+    "selector": "html > body > div:nth-of-type(3) > main > section > h2",
+    "tag": "h2",
+    "role": "",
+    "zIndex": "auto",
+    "position": "static",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0,
+      0
+    ],
+    "domIndex": 11
+  },
+  {
+    "zlevel": "[0 -> 0]",
+    "selector": "html > body > div:nth-of-type(3) > main > section > div",
+    "tag": "div",
+    "role": "",
+    "zIndex": "auto",
+    "position": "static",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0,
+      0
+    ],
+    "domIndex": 12
+  },
+  {
+    "zlevel": "[0 -> 0]",
+    "selector": "html > body > div:nth-of-type(3) > main > section > div > div",
+    "tag": "div",
+    "role": "",
+    "zIndex": "auto",
+    "position": "static",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0,
+      0
+    ],
+    "domIndex": 13
+  },
+  {
+    "zlevel": "[0 -> 0]",
+    "selector": "html > body > div:nth-of-type(3) > main > section > div > div > span",
+    "tag": "span",
+    "role": "",
+    "zIndex": "auto",
+    "position": "static",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0,
+      0
+    ],
+    "domIndex": 14
+  },
+  {
+    "zlevel": "[0 -> 0]",
+    "selector": "#val-period",
+    "tag": "span",
+    "role": "",
+    "zIndex": "auto",
+    "position": "static",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0,
+      0
+    ],
+    "domIndex": 15
+  },
+  {
+    "zlevel": "[0 -> 0]",
+    "selector": "#input-period",
+    "tag": "input",
+    "role": "",
+    "zIndex": "auto",
+    "position": "static",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0,
+      0
+    ],
+    "domIndex": 16
+  },
+  {
+    "zlevel": "[0 -> 0]",
+    "selector": "html > body > div:nth-of-type(3) > main > section > div > span",
+    "tag": "span",
+    "role": "",
+    "zIndex": "auto",
+    "position": "static",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0,
+      0
+    ],
+    "domIndex": 17
+  },
+  {
+    "zlevel": "[0 -> 0]",
+    "selector": "html > body > div:nth-of-type(3) > main > section > div:nth-of-type(2)",
+    "tag": "div",
+    "role": "",
+    "zIndex": "auto",
+    "position": "static",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0,
+      0
+    ],
+    "domIndex": 18
+  },
+  {
+    "zlevel": "[0 -> 0]",
+    "selector": "html > body > div:nth-of-type(3) > main > section > div:nth-of-type(2) > div",
+    "tag": "div",
+    "role": "",
+    "zIndex": "auto",
+    "position": "static",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0,
+      0
+    ],
+    "domIndex": 19
+  },
+  {
+    "zlevel": "[0 -> 0]",
+    "selector": "html > body > div:nth-of-type(3) > main > section > div:nth-of-type(2) > div > span",
+    "tag": "span",
+    "role": "",
+    "zIndex": "auto",
+    "position": "static",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0,
+      0
+    ],
+    "domIndex": 20
+  },
+  {
+    "zlevel": "[0 -> 0]",
+    "selector": "#val-feh",
+    "tag": "span",
+    "role": "",
+    "zIndex": "auto",
+    "position": "static",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0,
+      0
+    ],
+    "domIndex": 21
+  },
+  {
+    "zlevel": "[0 -> 0]",
+    "selector": "#input-feh",
+    "tag": "input",
+    "role": "",
+    "zIndex": "auto",
+    "position": "static",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0,
+      0
+    ],
+    "domIndex": 22
+  },
+  {
+    "zlevel": "[0 -> 0]",
+    "selector": "html > body > div:nth-of-type(3) > main > section > div:nth-of-type(2) > span",
+    "tag": "span",
+    "role": "",
+    "zIndex": "auto",
+    "position": "static",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0,
+      0
+    ],
+    "domIndex": 23
+  },
+  {
+    "zlevel": "[0 -> 0]",
+    "selector": "html > body > div:nth-of-type(3) > main > section > div:nth-of-type(3)",
+    "tag": "div",
+    "role": "",
+    "zIndex": "auto",
+    "position": "static",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0,
+      0
+    ],
+    "domIndex": 24
+  },
+  {
+    "zlevel": "[0 -> 0]",
+    "selector": "html > body > div:nth-of-type(3) > main > section > div:nth-of-type(3) > div",
+    "tag": "div",
+    "role": "",
+    "zIndex": "auto",
+    "position": "static",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0,
+      0
+    ],
+    "domIndex": 25
+  },
+  {
+    "zlevel": "[0 -> 0]",
+    "selector": "html > body > div:nth-of-type(3) > main > section > div:nth-of-type(3) > div > span",
+    "tag": "span",
+    "role": "",
+    "zIndex": "auto",
+    "position": "static",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0,
+      0
+    ],
+    "domIndex": 26
+  },
+  {
+    "zlevel": "[0 -> 0]",
+    "selector": "html > body > div:nth-of-type(3) > main > section > div:nth-of-type(3) > div > span > sub",
+    "tag": "sub",
+    "role": "",
+    "zIndex": "auto",
+    "position": "static",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0,
+      0
+    ],
+    "domIndex": 27
+  },
+  {
+    "zlevel": "[0 -> 0]",
+    "selector": "#val-amplitude",
+    "tag": "span",
+    "role": "",
+    "zIndex": "auto",
+    "position": "static",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0,
+      0
+    ],
+    "domIndex": 28
+  },
+  {
+    "zlevel": "[0 -> 0]",
+    "selector": "#input-amplitude",
+    "tag": "input",
+    "role": "",
+    "zIndex": "auto",
+    "position": "static",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0,
+      0
+    ],
+    "domIndex": 29
+  },
+  {
+    "zlevel": "[0 -> 0]",
+    "selector": "html > body > div:nth-of-type(3) > main > section > div:nth-of-type(3) > span",
+    "tag": "span",
+    "role": "",
+    "zIndex": "auto",
+    "position": "static",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0,
+      0
+    ],
+    "domIndex": 30
+  },
+  {
+    "zlevel": "[0 -> 0]",
+    "selector": "html > body > div:nth-of-type(3) > main > section > div:nth-of-type(4)",
+    "tag": "div",
+    "role": "",
+    "zIndex": "auto",
+    "position": "static",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0,
+      0
+    ],
+    "domIndex": 31
+  },
+  {
+    "zlevel": "[0 -> 0]",
+    "selector": "html > body > div:nth-of-type(3) > main > section > div:nth-of-type(4) > div",
+    "tag": "div",
+    "role": "",
+    "zIndex": "auto",
+    "position": "static",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0,
+      0
+    ],
+    "domIndex": 32
+  },
+  {
+    "zlevel": "[0 -> 0]",
+    "selector": "html > body > div:nth-of-type(3) > main > section > div:nth-of-type(4) > div > span",
+    "tag": "span",
+    "role": "",
+    "zIndex": "auto",
+    "position": "static",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0,
+      0
+    ],
+    "domIndex": 33
+  },
+  {
+    "zlevel": "[0 -> 0]",
+    "selector": "#val-distance",
+    "tag": "span",
+    "role": "",
+    "zIndex": "auto",
+    "position": "static",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0,
+      0
+    ],
+    "domIndex": 34
+  },
+  {
+    "zlevel": "[0 -> 0]",
+    "selector": "#input-distance",
+    "tag": "input",
+    "role": "",
+    "zIndex": "auto",
+    "position": "static",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0,
+      0
+    ],
+    "domIndex": 35
+  },
+  {
+    "zlevel": "[0 -> 0]",
+    "selector": "html > body > div:nth-of-type(3) > main > section > div:nth-of-type(4) > span",
+    "tag": "span",
+    "role": "",
+    "zIndex": "auto",
+    "position": "static",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0,
+      0
+    ],
+    "domIndex": 36
+  },
+  {
+    "zlevel": "[0 -> 0]",
+    "selector": "html > body > div:nth-of-type(3) > main > section > div:nth-of-type(5)",
+    "tag": "div",
+    "role": "",
+    "zIndex": "auto",
+    "position": "static",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0,
+      0
+    ],
+    "domIndex": 37
+  },
+  {
+    "zlevel": "[0 -> 0]",
+    "selector": "html > body > div:nth-of-type(3) > main > section > div:nth-of-type(5) > span",
+    "tag": "span",
+    "role": "",
+    "zIndex": "auto",
+    "position": "static",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0,
+      0
+    ],
+    "domIndex": 38
+  },
+  {
+    "zlevel": "[0 -> 0]",
+    "selector": "html > body > div:nth-of-type(3) > main > section > div:nth-of-type(5) > div",
+    "tag": "div",
+    "role": "",
+    "zIndex": "auto",
+    "position": "static",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0,
+      0
+    ],
+    "domIndex": 39
+  },
+  {
+    "zlevel": "[0 -> 0]",
+    "selector": "html > body > div:nth-of-type(3) > main > section > div:nth-of-type(5) > div > label",
+    "tag": "label",
+    "role": "",
+    "zIndex": "auto",
+    "position": "relative",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0,
+      0
+    ],
+    "domIndex": 40
+  },
+  {
+    "zlevel": "[0 -> 0]",
+    "selector": "html > body > div:nth-of-type(3) > main > section > div:nth-of-type(5) > div > label > span",
+    "tag": "span",
+    "role": "",
+    "zIndex": "auto",
+    "position": "absolute",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0,
+      0
+    ],
+    "domIndex": 42
+  },
+  {
+    "zlevel": "[0 -> 0]",
+    "selector": "html > body > div:nth-of-type(3) > main > section > div:nth-of-type(5) > div > label:nth-of-type(2)",
+    "tag": "label",
+    "role": "",
+    "zIndex": "auto",
+    "position": "relative",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0,
+      0
+    ],
+    "domIndex": 43
+  },
+  {
+    "zlevel": "[0 -> 0]",
+    "selector": "html > body > div:nth-of-type(3) > main > section > div:nth-of-type(5) > div > label:nth-of-type(2) > span",
+    "tag": "span",
+    "role": "",
+    "zIndex": "auto",
+    "position": "absolute",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0,
+      0
+    ],
+    "domIndex": 45
+  },
+  {
+    "zlevel": "[0 -> 0]",
+    "selector": "#btn-render",
+    "tag": "button",
+    "role": "",
+    "zIndex": "auto",
+    "position": "static",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0,
+      0
+    ],
+    "domIndex": 46
+  },
+  {
+    "zlevel": "[0 -> 0]",
+    "selector": "button#btn-render > span",
+    "tag": "span",
+    "role": "",
+    "zIndex": "auto",
+    "position": "static",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0,
+      0
+    ],
+    "domIndex": 47
+  },
+  {
+    "zlevel": "[0 -> 0]",
+    "selector": "html > body > div:nth-of-type(3) > main > section > div:nth-of-type(6)",
+    "tag": "div",
+    "role": "",
+    "zIndex": "auto",
+    "position": "static",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0,
+      0
+    ],
+    "domIndex": 48
+  },
+  {
+    "zlevel": "[0 -> 0]",
+    "selector": "html > body > div:nth-of-type(3) > main > section > div:nth-of-type(6) > h3",
+    "tag": "h3",
+    "role": "",
+    "zIndex": "auto",
+    "position": "static",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0,
+      0
+    ],
+    "domIndex": 49
+  },
+  {
+    "zlevel": "[0 -> 0]",
+    "selector": "html > body > div:nth-of-type(3) > main > section > div:nth-of-type(6) > div",
+    "tag": "div",
+    "role": "",
+    "zIndex": "auto",
+    "position": "static",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0,
+      0
+    ],
+    "domIndex": 50
+  },
+  {
+    "zlevel": "[0 -> 0]",
+    "selector": "html > body > div:nth-of-type(3) > main > section > div:nth-of-type(6) > div > div",
+    "tag": "div",
+    "role": "",
+    "zIndex": "auto",
+    "position": "static",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0,
+      0
+    ],
+    "domIndex": 51
+  },
+  {
+    "zlevel": "[0 -> 0]",
+    "selector": "html > body > div:nth-of-type(3) > main > section > div:nth-of-type(6) > div > div > span",
+    "tag": "span",
+    "role": "",
+    "zIndex": "auto",
+    "position": "static",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0,
+      0
+    ],
+    "domIndex": 52
+  },
+  {
+    "zlevel": "[0 -> 0]",
+    "selector": "html > body > div:nth-of-type(3) > main > section > div:nth-of-type(6) > div > div > span > sub",
+    "tag": "sub",
+    "role": "",
+    "zIndex": "auto",
+    "position": "static",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0,
+      0
+    ],
+    "domIndex": 53
+  },
+  {
+    "zlevel": "[0 -> 0]",
+    "selector": "#stat-mv",
+    "tag": "span",
+    "role": "",
+    "zIndex": "auto",
+    "position": "static",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0,
+      0
+    ],
+    "domIndex": 54
+  },
+  {
+    "zlevel": "[0 -> 0]",
+    "selector": "html > body > div:nth-of-type(3) > main > section > div:nth-of-type(6) > div > div:nth-of-type(2)",
+    "tag": "div",
+    "role": "",
+    "zIndex": "auto",
+    "position": "static",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0,
+      0
+    ],
+    "domIndex": 55
+  },
+  {
+    "zlevel": "[0 -> 0]",
+    "selector": "html > body > div:nth-of-type(3) > main > section > div:nth-of-type(6) > div > div:nth-of-type(2) > span",
+    "tag": "span",
+    "role": "",
+    "zIndex": "auto",
+    "position": "static",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0,
+      0
+    ],
+    "domIndex": 56
+  },
+  {
+    "zlevel": "[0 -> 0]",
+    "selector": "html > body > div:nth-of-type(3) > main > section > div:nth-of-type(6) > div > div:nth-of-type(2) > span > sub",
+    "tag": "sub",
+    "role": "",
+    "zIndex": "auto",
+    "position": "static",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0,
+      0
+    ],
+    "domIndex": 57
+  },
+  {
+    "zlevel": "[0 -> 0]",
+    "selector": "#stat-app-mv",
+    "tag": "span",
+    "role": "",
+    "zIndex": "auto",
+    "position": "static",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0,
+      0
+    ],
+    "domIndex": 58
+  },
+  {
+    "zlevel": "[0 -> 0]",
+    "selector": "html > body > div:nth-of-type(3) > main > section > div:nth-of-type(6) > div > div:nth-of-type(3)",
+    "tag": "div",
+    "role": "",
+    "zIndex": "auto",
+    "position": "static",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0,
+      0
+    ],
+    "domIndex": 59
+  },
+  {
+    "zlevel": "[0 -> 0]",
+    "selector": "html > body > div:nth-of-type(3) > main > section > div:nth-of-type(6) > div > div:nth-of-type(3) > span",
+    "tag": "span",
+    "role": "",
+    "zIndex": "auto",
+    "position": "static",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0,
+      0
+    ],
+    "domIndex": 60
+  },
+  {
+    "zlevel": "[0 -> 0]",
+    "selector": "#stat-modulus",
+    "tag": "span",
+    "role": "",
+    "zIndex": "auto",
+    "position": "static",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0,
+      0
+    ],
+    "domIndex": 61
+  },
+  {
+    "zlevel": "[0 -> 0]",
+    "selector": "html > body > div:nth-of-type(3) > main > section > div:nth-of-type(6) > div > div:nth-of-type(4)",
+    "tag": "div",
+    "role": "",
+    "zIndex": "auto",
+    "position": "static",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0,
+      0
+    ],
+    "domIndex": 62
+  },
+  {
+    "zlevel": "[0 -> 0]",
+    "selector": "html > body > div:nth-of-type(3) > main > section > div:nth-of-type(6) > div > div:nth-of-type(4) > span",
+    "tag": "span",
+    "role": "",
+    "zIndex": "auto",
+    "position": "static",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0,
+      0
+    ],
+    "domIndex": 63
+  },
+  {
+    "zlevel": "[0 -> 0]",
+    "selector": "html > body > div:nth-of-type(3) > main > section > div:nth-of-type(6) > div > div:nth-of-type(4) > span > sub",
+    "tag": "sub",
+    "role": "",
+    "zIndex": "auto",
+    "position": "static",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0,
+      0
+    ],
+    "domIndex": 64
+  },
+  {
+    "zlevel": "[0 -> 0]",
+    "selector": "#stat-luminosity",
+    "tag": "span",
+    "role": "",
+    "zIndex": "auto",
+    "position": "static",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0,
+      0
+    ],
+    "domIndex": 65
+  },
+  {
+    "zlevel": "[0 -> 0]",
+    "selector": "#strip-status",
+    "tag": "div",
+    "role": "",
+    "zIndex": "auto",
+    "position": "static",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0,
+      0
+    ],
+    "domIndex": 66
+  },
+  {
+    "zlevel": "[0 -> 0]",
+    "selector": "html > body > div:nth-of-type(3) > main > section:nth-of-type(2) > div",
+    "tag": "div",
+    "role": "",
+    "zIndex": "auto",
+    "position": "static",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "blur(12px)",
+    "stackingPath": [
+      0,
+      0
+    ],
+    "domIndex": 68
+  },
+  {
+    "zlevel": "[0 -> 0]",
+    "selector": "html > body > div:nth-of-type(3) > main > section:nth-of-type(2) > div > h2",
+    "tag": "h2",
+    "role": "",
+    "zIndex": "auto",
+    "position": "static",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0,
+      0
+    ],
+    "domIndex": 69
+  },
+  {
+    "zlevel": "[0 -> 0]",
+    "selector": "html > body > div:nth-of-type(3) > main > section:nth-of-type(2) > div > h2 > span",
+    "tag": "span",
+    "role": "",
+    "zIndex": "auto",
+    "position": "static",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0,
+      0
+    ],
+    "domIndex": 70
+  },
+  {
+    "zlevel": "[0 -> 0]",
+    "selector": "#badge-cache",
+    "tag": "span",
+    "role": "",
+    "zIndex": "auto",
+    "position": "static",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0,
+      0
+    ],
+    "domIndex": 71
+  },
+  {
+    "zlevel": "[0 -> 0]",
+    "selector": "html > body > div:nth-of-type(3) > main > section:nth-of-type(2) > div > div:nth-of-type(2)",
+    "tag": "div",
+    "role": "",
+    "zIndex": "auto",
+    "position": "static",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0,
+      0
+    ],
+    "domIndex": 75
+  },
+  {
+    "zlevel": "[0 -> 0]",
+    "selector": "#btn-play-pause",
+    "tag": "button",
+    "role": "",
+    "zIndex": "auto",
+    "position": "static",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0,
+      0
+    ],
+    "domIndex": 76
+  },
+  {
+    "zlevel": "[0 -> 0]",
+    "selector": "#video-progress",
+    "tag": "span",
+    "role": "",
+    "zIndex": "auto",
+    "position": "static",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0,
+      0
+    ],
+    "domIndex": 77
+  },
+  {
+    "zlevel": "[0 -> 0]",
+    "selector": "html > body > div:nth-of-type(3) > main > section:nth-of-type(2) > div:nth-of-type(2)",
+    "tag": "div",
+    "role": "",
+    "zIndex": "auto",
+    "position": "static",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "blur(12px)",
+    "stackingPath": [
+      0,
+      0
+    ],
+    "domIndex": 78
+  },
+  {
+    "zlevel": "[0 -> 0]",
+    "selector": "html > body > div:nth-of-type(3) > main > section:nth-of-type(2) > div:nth-of-type(2) > h2",
+    "tag": "h2",
+    "role": "",
+    "zIndex": "auto",
+    "position": "static",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0,
+      0
+    ],
+    "domIndex": 79
+  },
+  {
+    "zlevel": "[0 -> 0]",
+    "selector": "html > body > div:nth-of-type(3) > main > section:nth-of-type(2) > div:nth-of-type(2) > div",
+    "tag": "div",
+    "role": "",
+    "zIndex": "auto",
+    "position": "static",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0,
+      0
+    ],
+    "domIndex": 80
+  },
+  {
+    "zlevel": "[0 -> 0]",
+    "selector": "#hr-diagram",
+    "tag": "svg",
+    "role": "",
+    "zIndex": "auto",
+    "position": "static",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0,
+      0
+    ],
+    "domIndex": 81
+  },
+  {
+    "zlevel": "[0 -> 0]",
+    "selector": "svg#hr-diagram > rect",
+    "tag": "rect",
+    "role": "",
+    "zIndex": "auto",
+    "position": "static",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0,
+      0
+    ],
+    "domIndex": 82
+  },
+  {
+    "zlevel": "[0 -> 0]",
+    "selector": "svg#hr-diagram > line",
+    "tag": "line",
+    "role": "",
+    "zIndex": "auto",
+    "position": "static",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0,
+      0
+    ],
+    "domIndex": 83
+  },
+  {
+    "zlevel": "[0 -> 0]",
+    "selector": "svg#hr-diagram > line:nth-of-type(2)",
+    "tag": "line",
+    "role": "",
+    "zIndex": "auto",
+    "position": "static",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0,
+      0
+    ],
+    "domIndex": 84
+  },
+  {
+    "zlevel": "[0 -> 0]",
+    "selector": "svg#hr-diagram > text",
+    "tag": "text",
+    "role": "",
+    "zIndex": "auto",
+    "position": "static",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0,
+      0
+    ],
+    "domIndex": 85
+  },
+  {
+    "zlevel": "[0 -> 0]",
+    "selector": "svg#hr-diagram > text:nth-of-type(3)",
+    "tag": "text",
+    "role": "",
+    "zIndex": "auto",
+    "position": "static",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0,
+      0
+    ],
+    "domIndex": 87
+  },
+  {
+    "zlevel": "[0 -> 0]",
+    "selector": "svg#hr-diagram > text:nth-of-type(4)",
+    "tag": "text",
+    "role": "",
+    "zIndex": "auto",
+    "position": "static",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0,
+      0
+    ],
+    "domIndex": 88
+  },
+  {
+    "zlevel": "[0 -> 0]",
+    "selector": "svg#hr-diagram > text:nth-of-type(5)",
+    "tag": "text",
+    "role": "",
+    "zIndex": "auto",
+    "position": "static",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0,
+      0
+    ],
+    "domIndex": 89
+  },
+  {
+    "zlevel": "[0 -> 0]",
+    "selector": "svg#hr-diagram > text:nth-of-type(6)",
+    "tag": "text",
+    "role": "",
+    "zIndex": "auto",
+    "position": "static",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0,
+      0
+    ],
+    "domIndex": 90
+  },
+  {
+    "zlevel": "[0 -> 0]",
+    "selector": "svg#hr-diagram > text:nth-of-type(7)",
+    "tag": "text",
+    "role": "",
+    "zIndex": "auto",
+    "position": "static",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0,
+      0
+    ],
+    "domIndex": 91
+  },
+  {
+    "zlevel": "[0 -> 0]",
+    "selector": "svg#hr-diagram > text:nth-of-type(8)",
+    "tag": "text",
+    "role": "",
+    "zIndex": "auto",
+    "position": "static",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0,
+      0
+    ],
+    "domIndex": 92
+  },
+  {
+    "zlevel": "[0 -> 0]",
+    "selector": "svg#hr-diagram > text:nth-of-type(9)",
+    "tag": "text",
+    "role": "",
+    "zIndex": "auto",
+    "position": "static",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0,
+      0
+    ],
+    "domIndex": 93
+  },
+  {
+    "zlevel": "[0 -> 0]",
+    "selector": "svg#hr-diagram > text:nth-of-type(10)",
+    "tag": "text",
+    "role": "",
+    "zIndex": "auto",
+    "position": "static",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0,
+      0
+    ],
+    "domIndex": 94
+  },
+  {
+    "zlevel": "[0 -> 0]",
+    "selector": "svg#hr-diagram > polygon",
+    "tag": "polygon",
+    "role": "",
+    "zIndex": "auto",
+    "position": "static",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0,
+      0
+    ],
+    "domIndex": 95
+  },
+  {
+    "zlevel": "[0 -> 0]",
+    "selector": "svg#hr-diagram > text:nth-of-type(11)",
+    "tag": "text",
+    "role": "",
+    "zIndex": "auto",
+    "position": "static",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0,
+      0
+    ],
+    "domIndex": 96
+  },
+  {
+    "zlevel": "[0 -> 0]",
+    "selector": "svg#hr-diagram > line:nth-of-type(3)",
+    "tag": "line",
+    "role": "",
+    "zIndex": "auto",
+    "position": "static",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0,
+      0
+    ],
+    "domIndex": 97
+  },
+  {
+    "zlevel": "[0 -> 0]",
+    "selector": "svg#hr-diagram > text:nth-of-type(12)",
+    "tag": "text",
+    "role": "",
+    "zIndex": "auto",
+    "position": "static",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0,
+      0
+    ],
+    "domIndex": 98
+  },
+  {
+    "zlevel": "[0 -> 0]",
+    "selector": "#star-loop-path",
+    "tag": "ellipse",
+    "role": "",
+    "zIndex": "auto",
+    "position": "static",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0,
+      0
+    ],
+    "domIndex": 99
+  },
+  {
+    "zlevel": "[0 -> 0]",
+    "selector": "html > body > div:nth-of-type(3) > section",
+    "tag": "section",
+    "role": "",
+    "zIndex": "auto",
+    "position": "static",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "blur(12px)",
+    "stackingPath": [
+      0,
+      0
+    ],
+    "domIndex": 101
+  },
+  {
+    "zlevel": "[0 -> 0]",
+    "selector": "html > body > div:nth-of-type(3) > section > h2",
+    "tag": "h2",
+    "role": "",
+    "zIndex": "auto",
+    "position": "static",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0,
+      0
+    ],
+    "domIndex": 102
+  },
+  {
+    "zlevel": "[0 -> 0]",
+    "selector": "html > body > div:nth-of-type(3) > section > div",
+    "tag": "div",
+    "role": "",
+    "zIndex": "auto",
+    "position": "static",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0,
+      0
+    ],
+    "domIndex": 103
+  },
+  {
+    "zlevel": "[0 -> 0]",
+    "selector": "html > body > div:nth-of-type(3) > section > div > div",
+    "tag": "div",
+    "role": "",
+    "zIndex": "auto",
+    "position": "static",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0,
+      0
+    ],
+    "domIndex": 104
+  },
+  {
+    "zlevel": "[0 -> 0]",
+    "selector": "html > body > div:nth-of-type(3) > section > div > div > h3",
+    "tag": "h3",
+    "role": "",
+    "zIndex": "auto",
+    "position": "static",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0,
+      0
+    ],
+    "domIndex": 105
+  },
+  {
+    "zlevel": "[0 -> 0]",
+    "selector": "html > body > div:nth-of-type(3) > section > div > div > p",
+    "tag": "p",
+    "role": "",
+    "zIndex": "auto",
+    "position": "static",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0,
+      0
+    ],
+    "domIndex": 106
+  },
+  {
+    "zlevel": "[0 -> 0]",
+    "selector": "html > body > div:nth-of-type(3) > section > div > div > p > strong",
+    "tag": "strong",
+    "role": "",
+    "zIndex": "auto",
+    "position": "static",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0,
+      0
+    ],
+    "domIndex": 107
+  },
+  {
+    "zlevel": "[0 -> 0]",
+    "selector": "html > body > div:nth-of-type(3) > section > div > div > p > em",
+    "tag": "em",
+    "role": "",
+    "zIndex": "auto",
+    "position": "static",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0,
+      0
+    ],
+    "domIndex": 108
+  },
+  {
+    "zlevel": "[0 -> 0]",
+    "selector": "html > body > div:nth-of-type(3) > section > div > div:nth-of-type(2)",
+    "tag": "div",
+    "role": "",
+    "zIndex": "auto",
+    "position": "static",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0,
+      0
+    ],
+    "domIndex": 109
+  },
+  {
+    "zlevel": "[0 -> 0]",
+    "selector": "html > body > div:nth-of-type(3) > section > div > div:nth-of-type(2) > h3",
+    "tag": "h3",
+    "role": "",
+    "zIndex": "auto",
+    "position": "static",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0,
+      0
+    ],
+    "domIndex": 110
+  },
+  {
+    "zlevel": "[0 -> 0]",
+    "selector": "html > body > div:nth-of-type(3) > section > div > div:nth-of-type(2) > p",
+    "tag": "p",
+    "role": "",
+    "zIndex": "auto",
+    "position": "static",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0,
+      0
+    ],
+    "domIndex": 111
+  },
+  {
+    "zlevel": "[0 -> 0]",
+    "selector": "html > body > div:nth-of-type(3) > section > div > div:nth-of-type(2) > p > br",
+    "tag": "br",
+    "role": "",
+    "zIndex": "auto",
+    "position": "static",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0,
+      0
+    ],
+    "domIndex": 112
+  },
+  {
+    "zlevel": "[0 -> 0]",
+    "selector": "html > body > div:nth-of-type(3) > section > div > div:nth-of-type(2) > p > strong",
+    "tag": "strong",
+    "role": "",
+    "zIndex": "auto",
+    "position": "static",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0,
+      0
+    ],
+    "domIndex": 113
+  },
+  {
+    "zlevel": "[0 -> 0]",
+    "selector": "html > body > div:nth-of-type(3) > section > div > div:nth-of-type(2) > p > br:nth-of-type(2)",
+    "tag": "br",
+    "role": "",
+    "zIndex": "auto",
+    "position": "static",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0,
+      0
+    ],
+    "domIndex": 114
+  },
+  {
+    "zlevel": "[0 -> 0]",
+    "selector": "html > body > div:nth-of-type(3) > section > div > div:nth-of-type(2) > p > strong:nth-of-type(2)",
+    "tag": "strong",
+    "role": "",
+    "zIndex": "auto",
+    "position": "static",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0,
+      0
+    ],
+    "domIndex": 115
+  },
+  {
+    "zlevel": "[0 -> 0]",
+    "selector": "html > body > div:nth-of-type(3) > section > div > div:nth-of-type(3)",
+    "tag": "div",
+    "role": "",
+    "zIndex": "auto",
+    "position": "static",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0,
+      0
+    ],
+    "domIndex": 116
+  },
+  {
+    "zlevel": "[0 -> 0]",
+    "selector": "html > body > div:nth-of-type(3) > section > div > div:nth-of-type(3) > h3",
+    "tag": "h3",
+    "role": "",
+    "zIndex": "auto",
+    "position": "static",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0,
+      0
+    ],
+    "domIndex": 117
+  },
+  {
+    "zlevel": "[0 -> 0]",
+    "selector": "html > body > div:nth-of-type(3) > section > div > div:nth-of-type(3) > p",
+    "tag": "p",
+    "role": "",
+    "zIndex": "auto",
+    "position": "static",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0,
+      0
+    ],
+    "domIndex": 118
+  },
+  {
+    "zlevel": "[0 -> 0]",
+    "selector": "html > body > div:nth-of-type(3) > section > div > div:nth-of-type(3) > p > strong",
+    "tag": "strong",
+    "role": "",
+    "zIndex": "auto",
+    "position": "static",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0,
+      0
+    ],
+    "domIndex": 119
+  },
+  {
+    "zlevel": "[0 -> 0]",
+    "selector": "html > body > div:nth-of-type(3) > section > div > div:nth-of-type(3) > p > em",
+    "tag": "em",
+    "role": "",
+    "zIndex": "auto",
+    "position": "static",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0,
+      0
+    ],
+    "domIndex": 120
+  },
+  {
+    "zlevel": "[0 -> 0]",
+    "selector": "html > body > div:nth-of-type(3) > section > div > div:nth-of-type(3) > p > strong:nth-of-type(2)",
+    "tag": "strong",
+    "role": "",
+    "zIndex": "auto",
+    "position": "static",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0,
+      0
+    ],
+    "domIndex": 121
+  },
+  {
+    "zlevel": "[0 -> 0]",
+    "selector": "html > body > div:nth-of-type(3) > section > div > div:nth-of-type(3) > p > span",
+    "tag": "span",
+    "role": "",
+    "zIndex": "auto",
+    "position": "static",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0,
+      0
+    ],
+    "domIndex": 122
+  },
+  {
+    "zlevel": "[0 -> 0]",
+    "selector": "html > body > div:nth-of-type(3) > section > div > div:nth-of-type(3) > p > span > sub",
+    "tag": "sub",
+    "role": "",
+    "zIndex": "auto",
+    "position": "static",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0,
+      0
+    ],
+    "domIndex": 123
+  },
+  {
+    "zlevel": "[0 -> 0 -> 0]",
+    "selector": "html > body > div:nth-of-type(3) > main > section > div:nth-of-type(5) > div > label > input",
+    "tag": "input",
+    "role": "",
+    "zIndex": "auto",
+    "position": "absolute",
+    "opacity": "0",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0,
+      0,
+      0
+    ],
+    "domIndex": 41
+  },
+  {
+    "zlevel": "[0 -> 0 -> 0]",
+    "selector": "#radio-rrc",
+    "tag": "input",
+    "role": "",
+    "zIndex": "auto",
+    "position": "absolute",
+    "opacity": "0",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0,
+      0,
+      0
+    ],
+    "domIndex": 44
+  },
+  {
+    "zlevel": "[0 -> 0 -> 0]",
+    "selector": "svg#hr-diagram > text:nth-of-type(2)",
+    "tag": "text",
+    "role": "",
+    "zIndex": "auto",
+    "position": "static",
+    "opacity": "1",
+    "transform": "matrix(0, -1, 1, 0, -112, 148)",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0,
+      0,
+      0
+    ],
+    "domIndex": 86
+  },
+  {
+    "zlevel": "[0 -> 0 -> 0]",
+    "selector": "#star-indicator",
+    "tag": "circle",
+    "role": "",
+    "zIndex": "auto",
+    "position": "static",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "drop-shadow(rgb(102, 252, 241) 0px 0px 6px)",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0,
+      0,
+      0
+    ],
+    "domIndex": 100
+  },
+  {
+    "zlevel": "[0 -> 0 -> 1]",
+    "selector": "html > body > div:nth-of-type(3) > main > section:nth-of-type(2) > div > div",
+    "tag": "div",
+    "role": "",
+    "zIndex": "1",
+    "position": "relative",
+    "opacity": "1",
+    "transform": "matrix(1, 0, 0, 1, 0, 0)",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0,
+      0,
+      1
+    ],
+    "domIndex": 72
+  },
+  {
+    "zlevel": "[0 -> 0 -> 1 -> 1]",
+    "selector": "#star-video",
+    "tag": "video",
+    "role": "",
+    "zIndex": "1",
+    "position": "relative",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0,
+      0,
+      1,
+      1
+    ],
+    "domIndex": 73
+  },
+  {
+    "zlevel": "[0 -> 0 -> 1 -> 1]",
+    "selector": "video#star-video > source",
+    "tag": "source",
+    "role": "",
+    "zIndex": "auto",
+    "position": "static",
+    "opacity": "1",
+    "transform": "none",
+    "filter": "none",
+    "backdropFilter": "none",
+    "stackingPath": [
+      0,
+      0,
+      1,
+      1
+    ],
+    "domIndex": 74
+  }
+]
