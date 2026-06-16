@@ -325,10 +325,13 @@ document.addEventListener("DOMContentLoaded", () => {
             }
 
             // Load and play new video
-            const source = video.querySelector("source");
-            source.src = data.video_url;
+            video.src = data.video_url;
+            video.muted = true;
             video.load();
-            video.play();
+            video.play().catch(err => {
+                console.warn("Autoplay was blocked by browser policy. User interaction required:", err);
+                btnPlayPause.textContent = "▶ Play";
+            });
             
             // Hide loading state
             loadingOverlay.classList.add("hidden");

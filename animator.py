@@ -1,6 +1,20 @@
+from logging import config
 import os
 import numpy as np
-from manim import *
+# pyrefly: ignore [missing-import]
+# Explicit imports - this makes your IDE much happier
+from manim import (
+    Scene, Circle, Axes, Text, Dot, Arrow, VGroup, Rectangle,
+    RoundedRectangle, ManimColor,
+    ValueTracker, DecimalNumber, Integer,
+    Create, Write, FadeIn, linear,
+    config, LEFT, RIGHT, DOWN, UP, ORIGIN, TAU, WHITE,
+    interpolate_color
+)
+
+# Optional but very useful
+# pyrefly: ignore [missing-import]
+from manim.utils.color import interpolate_color
 
 config.background_color = "#0B0C10"
 

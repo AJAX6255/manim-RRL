@@ -42,6 +42,7 @@ body {
     height: 100%;
     display: block;
     z-index: -2;
+    pointer-events: none;
 }
 
 .stars {
@@ -53,6 +54,7 @@ body {
     animation: move-twink-back 200s linear infinite;
     z-index: -1;
     opacity: 0.4;
+    pointer-events: none;
 }
 
 @keyframes move-twink-back {
@@ -428,6 +430,8 @@ input[type=range]::-webkit-slider-thumb:hover {
 
 .video-wrapper {
     position: relative;
+    z-index: 1;
+    transform: translate3d(0, 0, 0);
     width: 100%;
     aspect-ratio: 16/9;
     border-radius: 8px;
@@ -437,6 +441,8 @@ input[type=range]::-webkit-slider-thumb:hover {
 }
 
 #star-video {
+    position: relative;
+    z-index: 1;
     width: 100%;
     height: 100%;
     object-fit: cover;
