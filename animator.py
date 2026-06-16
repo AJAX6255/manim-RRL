@@ -79,7 +79,7 @@ class RRStarPulsation(Scene):
         # ===================== LIGHT CURVE =====================
         lc_axes = Axes(
             x_range=[0, 2.0, 0.5],
-            y_range=[m_V + AMPLITUDE * 1.15, m_V - AMPLITUDE * 1.15, 0.2],
+            y_range=[- (m_V + AMPLITUDE * 1.15), - (m_V - AMPLITUDE * 1.15), 0.2],
             x_length=5.3,
             y_length=2.5,
             axis_config={"color": "#45A29E", "stroke_width": 2},
@@ -88,7 +88,7 @@ class RRStarPulsation(Scene):
         lc_title = Text("V-band Light Curve", font_size=18, color="#66FCF1").next_to(lc_axes, UP, buff=0.2)
         self.play(Create(lc_axes), Write(lc_title))
 
-        lc_curve = lc_axes.plot(lc_func, x_range=[0, 2], color="#FF007F", stroke_width=4.5)
+        lc_curve = lc_axes.plot(lambda x: -lc_func(x), x_range=[0, 2], color="#FF007F", stroke_width=4.5)
         self.play(Create(lc_curve))
 
         # ===================== RADIAL VELOCITY =====================
@@ -158,14 +158,18 @@ class RRStarPulsation(Scene):
         # Updaters
         star.add_updater(lambda s: self.update_star(s, phase_tracker.get_value()))
         arrows.add_updater(lambda a: self.update_arrows(a, phase_tracker.get_value(), star))
-        lc_dot.add_updater(lambda d: d.move_to(lc_axes.c2p(phase_tracker.get_value(), lc_func(phase_tracker.get_value()))))
+        lc_dot.add_updater(lambda d: d.move_to(lc_axes.c2p(phase_tracker.get_value(), -lc_func(phase_tracker.get_value()))))
         rv_dot.add_updater(lambda d: d.move_to(rv_axes.c2p(phase_tracker.get_value(), rv_func(phase_tracker.get_value()))))
 
-        # Value updaters
-        val_phase.add_updater(lambda m: m.set_value(phase_tracker.get_value() % 1.0))
-        val_radius.add_updater(lambda m: m.set_value(star.get_width() / (2 * 1.45)))  # normalized to base radius
-        val_teff.add_updater(lambda m: m.set_value(int(5800 + 1800 * ((lc_func(phase_tracker.get_value()) - m_V) / (-AMPLITUDE)))))
-        val_vel.add_updater(lambda m: m.set_value(rv_func(phase_tracker.get_value())))
+        # Value updaters (with positioning chained to prevent overlap when values change)
+        val_phase.add_updater(lambda m: m.set_value(phase_tracker.get_value() % 1.0).next_to(labels[0], RIGHT, buff=0.6))
+        val_radius.add_updater(lambda m: m.set_value(star.get_width() / (2 * 1.45)).next_to(labels[1], RIGHT, buff=0.6))
+        val_teff.add_updater(lambda m: m.set_value(int(5800 + 1800 * ((lc_func(phase_tracker.get_value()) - m_V) / (-AMPLITUDE)))).next_to(labels[2], RIGHT, buff=0.6))
+        val_vel.add_updater(lambda m: m.set_value(rv_func(phase_tracker.get_value())).next_to(labels[3], RIGHT, buff=0.6))
+
+        # Suffix updaters to keep them aligned to the values
+        for i, suf in enumerate(suffixes):
+            suf.add_updater(lambda s, idx=i: s.next_to([val_phase, val_radius, val_teff, val_vel][idx], RIGHT, buff=0.1))
 
         # ===================== ANIMATION =====================
         self.play(
