@@ -20,24 +20,10 @@
         <main class="dashboard-grid">
             <!-- Right Panel: Animation -->
             <section class="display-container">
-                <div class="video-wrapper">
-                    <!-- Custom loading state -->
-                    <div class="loading-overlay hidden" id="loading-overlay">
-                        <div class="galaxy-spinner">
-                            <div class="orbit-1"></div>
-                            <div class="orbit-2"></div>
-                            <div class="orbit-3"></div>
-                            <div class="star-core"></div>
-                        </div>
-                        <p class="loading-text">Rendering Animation with Manim...</p>
-                        <p class="loading-subtext">Compiling vector graphics & encoding frames</p>
-                    </div>
-                    
-                    <!-- Video Player -->
-                    <video id="star-video" src="/media/videos/animator/480p15/RRStarPulsation.mp4" loop muted playsinline controls>
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
+                <!-- Video Player -->
+                <video id="star-video" src="/media/videos/animator/480p15/RRStarPulsation.mp4" loop muted playsinline controls style="width: 100%; max-width: 960px; height: auto; display: block; margin: 0 auto; background: transparent; z-index: 100; position: relative;">
+                    Your browser does not support the video tag.
+                </video>
                 
                 <!-- Video Controls Overlay -->
                 <div class="video-controls">
