@@ -1,9 +1,10 @@
+import os
 import json
 import sys
 from playwright.sync_api import sync_playwright
 
 def run_debug():
-    url = "http://127.0.0.1:8000/"
+    url = os.environ.get("TEST_URL", "http://127.0.0.1:8000/")
     print(f"Connecting to live DOM at {url}...")
     
     with sync_playwright() as p:

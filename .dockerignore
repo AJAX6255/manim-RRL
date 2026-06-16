@@ -1,0 +1,34 @@
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# Python caching and compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Local Manim output and caches
+media/
+cache/
+
+# Local test outputs and GSD planning/logs
+stacking_report.json
+.planning/
+.gemini/
+*.log
+
+# Git files
+.git/
+.gitignore
+
+# IDE settings
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
