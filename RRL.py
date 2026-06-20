@@ -4,17 +4,20 @@ import numpy as np
 class RRLyraeLightCurve(Scene):
     def construct(self):
         # Title
-        title = Title("RR Lyrae Stars — RRab Type Light Curve")
-        self.play(Write(title))
+        title = Text("RR Lyrae Stars — RRab Type Light Curve", font_size=32, color=BLUE_B)
+        title.to_edge(UP, buff=0.4)
+        title_line = Line(start=[-5.5, 3.1, 0], end=[5.5, 3.1, 0], color=BLUE_B, stroke_width=2)
+        self.play(Write(title), Create(title_line))
         self.wait(0.5)
 
         # Physical context
-        formula = MathTex(
-            r"M_V = \alpha\,[\text{Fe}/\text{H}] + \beta",
-            font_size=36
-        ).next_to(title, DOWN, buff=0.6)
-        subtitle = Text("Period-Luminosity-Metallicity Relation", font_size=28, color=BLUE)
-        subtitle.next_to(formula, DOWN, buff=0.3)
+        formula = Text(
+            "M_V = α [Fe/H] + β",
+            font_size=24,
+            t2c={"α": YELLOW, "β": YELLOW, "[Fe/H]": ORANGE}
+        ).next_to(title, DOWN, buff=0.3)
+        subtitle = Text("Period-Luminosity-Metallicity Relation", font_size=20, color=BLUE)
+        subtitle.next_to(formula, DOWN, buff=0.2)
 
         self.play(Write(formula), Write(subtitle))
         self.wait(1)
@@ -25,16 +28,18 @@ class RRLyraeLightCurve(Scene):
             y_range=[14.5, 16.5, 0.5],   # Apparent Magnitude (smaller = brighter)
             x_length=9,
             y_length=5.5,
-            axis_config={"include_numbers": True, "font_size": 24},
-            x_axis_config={"label": "Phase"},
-            y_axis_config={"label": "Magnitude"},
+            axis_config={
+                "include_numbers": True,
+                "font_size": 24,
+                "label_constructor": Text
+            },
         ).shift(DOWN * 0.8)
 
-        # Invert y-axis visually (brighter = higher on screen)
-        axes.y_axis.label.rotate(90 * DEGREES).shift(LEFT * 0.5)
+        phase_label = axes.get_x_axis_label(Text("Phase (φ)", font_size=16))
+        mag_label = axes.get_y_axis_label(Text("Apparent Magnitude", font_size=16), direction=LEFT)
 
-        phase_label = axes.get_x_axis_label("Phase \\phi")
-        mag_label = axes.get_y_axis_label("Apparent\\ Magnitude", direction=LEFT)
+        # Invert y-axis visually (brighter = higher on screen)
+        mag_label.rotate(90 * DEGREES).shift(LEFT * 0.5)
 
         self.play(Create(axes), Write(phase_label), Write(mag_label))
         self.wait(0.8)

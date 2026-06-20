@@ -83,7 +83,7 @@ class RRStarPulsation(Scene):
             x_length=5.3,
             y_length=2.5,
             axis_config={"color": "#45A29E", "stroke_width": 2},
-        ).move_to(right + UP * 1.05)
+        ).move_to(right + UP * 0.35)
 
         lc_title = Text("V-band Light Curve", font_size=18, color="#66FCF1").next_to(lc_axes, UP, buff=0.2)
         self.play(Create(lc_axes), Write(lc_title))
@@ -98,7 +98,7 @@ class RRStarPulsation(Scene):
             x_length=5.3,
             y_length=2.4,
             axis_config={"color": "#45A29E", "stroke_width": 2},
-        ).move_to(right + DOWN * 1.65)
+        ).move_to(right + DOWN * 2.35)
 
         rv_title = Text("Radial Velocity (km/s)", font_size=18, color="#66FCF1").next_to(rv_axes, UP, buff=0.2)
         self.play(Create(rv_axes), Write(rv_title))
@@ -108,7 +108,7 @@ class RRStarPulsation(Scene):
 
         # ===================== STAR + STATE BOX =====================
         star = Circle(radius=1.45, fill_opacity=0.95, stroke_color=WHITE, stroke_width=3)
-        star.move_to(left)
+        star.move_to(left + UP * 0.3)
 
         self.play(FadeIn(star, scale=0.6))
 
@@ -200,6 +200,7 @@ class RRStarPulsation(Scene):
         rad = star_mob.get_width() / 2
         vel_mag = abs(curr_vel)
         arrow_len = 0.25 + vel_mag * 0.012
+        center = star_mob.get_center()
 
         arrows_group.submobjects.clear()
 
@@ -208,12 +209,12 @@ class RRStarPulsation(Scene):
             direction = np.array([np.cos(angle), np.sin(angle), 0])
 
             if curr_vel < 0:   # Expanding
-                start = LEFT*3.6 + direction * (rad - 0.15)
-                end = LEFT*3.6 + direction * (rad + arrow_len)
+                start = center + direction * (rad - 0.15)
+                end = center + direction * (rad + arrow_len)
                 color = "#00FFFF"
             else:              # Contracting
-                start = LEFT*3.6 + direction * (rad + arrow_len)
-                end = LEFT*3.6 + direction * (rad - 0.15)
+                start = center + direction * (rad + arrow_len)
+                end = center + direction * (rad - 0.15)
                 color = "#FF4444"
 
             arrow = Arrow(start, end, color=color, stroke_width=2.5 + vel_mag*0.08, buff=0)
