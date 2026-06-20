@@ -34,6 +34,19 @@ else:
 m_V = M_V + 5 * np.log10(DISTANCE) - 5
 
 
+# Compute peak of lc_func fourier series to normalize it to exactly 0.5 amplitude
+lc_samples = []
+for p in np.linspace(0, 1, 200):
+    if MODE == "RRab":
+        val = (0.58 * np.sin(2*np.pi*p - np.pi/2) +
+               0.26 * np.sin(4*np.pi*p - 2.6) +
+               0.11 * np.sin(6*np.pi*p - 3.8))
+    else:
+        val = 0.48 * np.sin(2*np.pi*p - np.pi/2)
+    lc_samples.append(val)
+lc_peak = max(np.abs(lc_samples))
+
+
 def lc_func(x):
     phase = x % 1.0
     if MODE == "RRab":
@@ -42,7 +55,9 @@ def lc_func(x):
                0.11 * np.sin(6*np.pi*phase - 3.8))
     else:
         val = 0.48 * np.sin(2*np.pi*phase - np.pi/2)
-    return m_V - val * AMPLITUDE
+    # Normalize val to have a maximum absolute value of 0.5, so that amplitude matches AMPLITUDE * 0.5
+    normalized_val = (val / lc_peak) * 0.5
+    return m_V - normalized_val * AMPLITUDE
 
 
 def rv_func(x):
@@ -88,7 +103,7 @@ class RRStarPulsation(Scene):
             x_range=[0, 2.0, 0.5],
             y_range=[- (m_V + AMPLITUDE * 0.6), - (m_V - AMPLITUDE * 0.6), AMPLITUDE * 0.5],
             x_length=5.3,
-            y_length=2.5,
+            y_length=2.0,
             axis_config={
                 "color": "#45A29E",
                 "stroke_width": 2,
@@ -108,7 +123,7 @@ class RRStarPulsation(Scene):
                     "num_decimal_places": 1,
                 }
             }
-        ).move_to(right + UP * 0.35)
+        ).move_to(right + UP * 0.65)
 
         lc_axes.add_coordinates(
             [0, 0.5, 1.0, 1.5, 2.0],
@@ -129,7 +144,7 @@ class RRStarPulsation(Scene):
             x_range=[0, 2.0, 0.5],
             y_range=[V_SYS + rv_peak_min * 1.25, V_SYS + rv_peak_max * 1.25, 5.0],
             x_length=5.3,
-            y_length=2.4,
+            y_length=1.8,
             axis_config={
                 "color": "#45A29E",
                 "stroke_width": 2,
@@ -149,14 +164,14 @@ class RRStarPulsation(Scene):
                     "num_decimal_places": 1,
                 }
             }
-        ).move_to(right + DOWN * 2.35)
+        ).move_to(right + DOWN * 2.15)
 
         rv_axes.add_coordinates(
             [0, 0.5, 1.0, 1.5, 2.0],
             [V_SYS + rv_peak_min, V_SYS, V_SYS + rv_peak_max]
         )
 
-        rv_title = Text("Radial Velocity (km/s)", font_size=18, color="#66FCF1").next_to(rv_axes, UP, buff=0.25)
+        rv_title = Text("Radial Velocity (km/s)", font_size=18, color="#66FCF1").next_to(rv_axes, UP, buff=0.2)
         self.play(Create(rv_axes), Write(rv_title))
 
         rv_curve = rv_axes.plot(lambda x: V_SYS + rv_func(x), x_range=[0, 2], color="#00E5FF", stroke_width=4)
