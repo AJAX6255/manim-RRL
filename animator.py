@@ -56,6 +56,13 @@ def rv_func(x):
     return val * (35 if MODE == "RRab" else 18)
 
 
+# Calculate peak velocities dynamically
+rv_samples = [rv_func(p) for p in np.linspace(0, 1, 200)]
+rv_peak_max = max(rv_samples)  # max positive velocity (contraction)
+rv_peak_min = min(rv_samples)  # max negative velocity (expansion)
+V_SYS = 40.0  # Systemic velocity (km/s)
+
+
 class RRStarPulsation(Scene):
     def construct(self):
         # Title and Info
@@ -79,13 +86,39 @@ class RRStarPulsation(Scene):
         # ===================== LIGHT CURVE =====================
         lc_axes = Axes(
             x_range=[0, 2.0, 0.5],
-            y_range=[- (m_V + AMPLITUDE * 1.15), - (m_V - AMPLITUDE * 1.15), 0.2],
+            y_range=[- (m_V + AMPLITUDE * 0.6), - (m_V - AMPLITUDE * 0.6), AMPLITUDE * 0.5],
             x_length=5.3,
             y_length=2.5,
-            axis_config={"color": "#45A29E", "stroke_width": 2},
+            axis_config={
+                "color": "#45A29E",
+                "stroke_width": 2,
+                "label_constructor": Text,
+            },
+            y_axis_config={
+                "label_constructor": Text,
+                "font_size": 11,
+                "decimal_number_config": {
+                    "num_decimal_places": 2,
+                }
+            },
+            x_axis_config={
+                "label_constructor": Text,
+                "font_size": 11,
+                "decimal_number_config": {
+                    "num_decimal_places": 1,
+                }
+            }
         ).move_to(right + UP * 0.35)
 
-        lc_title = Text("V-band Light Curve", font_size=18, color="#66FCF1").next_to(lc_axes, UP, buff=0.2)
+        lc_axes.add_coordinates(
+            [0, 0.5, 1.0, 1.5, 2.0],
+            [- (m_V + AMPLITUDE * 0.5), - m_V, - (m_V - AMPLITUDE * 0.5)]
+        )
+
+        for label in lc_axes.y_axis.numbers:
+            label.set_value(abs(label.get_value()))
+
+        lc_title = Text("V-band Light Curve", font_size=18, color="#66FCF1").next_to(lc_axes, UP, buff=0.25)
         self.play(Create(lc_axes), Write(lc_title))
 
         lc_curve = lc_axes.plot(lambda x: -lc_func(x), x_range=[0, 2], color="#FF007F", stroke_width=4.5)
@@ -94,16 +127,39 @@ class RRStarPulsation(Scene):
         # ===================== RADIAL VELOCITY =====================
         rv_axes = Axes(
             x_range=[0, 2.0, 0.5],
-            y_range=[-45, 45, 15],
+            y_range=[V_SYS + rv_peak_min * 1.25, V_SYS + rv_peak_max * 1.25, 5.0],
             x_length=5.3,
             y_length=2.4,
-            axis_config={"color": "#45A29E", "stroke_width": 2},
+            axis_config={
+                "color": "#45A29E",
+                "stroke_width": 2,
+                "label_constructor": Text,
+            },
+            y_axis_config={
+                "label_constructor": Text,
+                "font_size": 11,
+                "decimal_number_config": {
+                    "num_decimal_places": 1,
+                }
+            },
+            x_axis_config={
+                "label_constructor": Text,
+                "font_size": 11,
+                "decimal_number_config": {
+                    "num_decimal_places": 1,
+                }
+            }
         ).move_to(right + DOWN * 2.35)
 
-        rv_title = Text("Radial Velocity (km/s)", font_size=18, color="#66FCF1").next_to(rv_axes, UP, buff=0.2)
+        rv_axes.add_coordinates(
+            [0, 0.5, 1.0, 1.5, 2.0],
+            [V_SYS + rv_peak_min, V_SYS, V_SYS + rv_peak_max]
+        )
+
+        rv_title = Text("Radial Velocity (km/s)", font_size=18, color="#66FCF1").next_to(rv_axes, UP, buff=0.25)
         self.play(Create(rv_axes), Write(rv_title))
 
-        rv_curve = rv_axes.plot(rv_func, x_range=[0, 2], color="#00E5FF", stroke_width=4)
+        rv_curve = rv_axes.plot(lambda x: V_SYS + rv_func(x), x_range=[0, 2], color="#00E5FF", stroke_width=4)
         self.play(Create(rv_curve))
 
         # ===================== STAR + STATE BOX =====================
@@ -159,13 +215,13 @@ class RRStarPulsation(Scene):
         star.add_updater(lambda s: self.update_star(s, phase_tracker.get_value()))
         arrows.add_updater(lambda a: self.update_arrows(a, phase_tracker.get_value(), star))
         lc_dot.add_updater(lambda d: d.move_to(lc_axes.c2p(phase_tracker.get_value(), -lc_func(phase_tracker.get_value()))))
-        rv_dot.add_updater(lambda d: d.move_to(rv_axes.c2p(phase_tracker.get_value(), rv_func(phase_tracker.get_value()))))
+        rv_dot.add_updater(lambda d: d.move_to(rv_axes.c2p(phase_tracker.get_value(), V_SYS + rv_func(phase_tracker.get_value()))))
 
         # Value updaters (with positioning chained to prevent overlap when values change)
         val_phase.add_updater(lambda m: m.set_value(phase_tracker.get_value() % 1.0).next_to(labels[0], RIGHT, buff=0.6))
         val_radius.add_updater(lambda m: m.set_value(star.get_width() / (2 * 1.45)).next_to(labels[1], RIGHT, buff=0.6))
         val_teff.add_updater(lambda m: m.set_value(int(5800 + 1800 * ((lc_func(phase_tracker.get_value()) - m_V) / (-AMPLITUDE)))).next_to(labels[2], RIGHT, buff=0.6))
-        val_vel.add_updater(lambda m: m.set_value(rv_func(phase_tracker.get_value())).next_to(labels[3], RIGHT, buff=0.6))
+        val_vel.add_updater(lambda m: m.set_value(V_SYS + rv_func(phase_tracker.get_value())).next_to(labels[3], RIGHT, buff=0.6))
 
         # Suffix updaters to keep them aligned to the values
         for i, suf in enumerate(suffixes):
